@@ -121,3 +121,29 @@
 //         console.log("Tomorrow is sunday!")
 //          break;
 // }
+
+
+//Write a program that accepts two numbers, then compares their values and displays an appropriate message in all cases.
+//my example
+//need to add global variable next time 
+// function comparesTwoNums (num1,num2) {
+//     if(num1 == num2){
+//         console.log("are you me?!?")
+//     } else if (num1 != num2){
+//         console.log("Who are you?!?")
+//     } else {
+//         console.log("You're not even a number!")
+//     }
+// }
+
+//jsway solution 
+// const number1 = Number(prompt("Enter number 1:"));
+// const number2 = Number(prompt("Enter number 2:"));
+
+// if (number1 < number2) {
+//   console.log(`${number1} is less than ${number2}`);
+// } else if (number1 > number2) {
+//   console.log(`${number1} is greater than ${number2}`);
+// } else {
+//   console.log(`${number1} and ${number2} are equal`);
+// }
