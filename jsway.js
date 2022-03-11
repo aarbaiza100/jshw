@@ -147,3 +147,140 @@
 // } else {
 //   console.log(`${number1} and ${number2} are equal`);
 // }
+
+
+//final values problems 
+// nb1=nb2=nb3=4
+//nb1 = 4, nb2=3, nb3= 2
+//nb1= 2, nb2=4,nb3=0
+
+// let nb1 = Number(prompt("Enter nb1:"));
+// let nb2 = Number(prompt("Enter nb2:"));
+// let nb3 = Number(prompt("Enter nb3:"));
+
+// if (nb1 > nb2) {
+//   nb1 = nb3 * 2;
+// } else {
+//   nb1++;
+//   if (nb2 > nb3) {
+//     nb1 += nb3 * 3;
+//   } else {
+//     nb1 = 0;
+//     nb3 = nb3 * 2 + nb2;
+//   }
+// }
+// console.log(nb1, nb2, nb3);
+
+
+ //number of days in a month 
+//  Write a program that accepts a month number (between 1 and 12), 
+//  then shows the number of days of that month. 
+//  Leap years are excluded. 
+//  Incorrect inputs must be taken into account.
+
+// const month = Number(prompt("Enter a month number:"));
+
+// if (
+//     month == 1 ||
+//     month == 2 ||
+//     month == 3 ||
+//     month == 4 ||
+//     month == 5 ||
+//     month == 6 ||
+//     month == 7 ||
+//     month == 8 ||
+//     month == 9 ||
+//     month == 10 ||
+//     month == 11 ||
+//     month == 12 
+// ) {
+//     alert("This month has 31 days");
+// } else if (month == 4 || month == 6|| month == 9 || month == 11) {
+//     alert("This month has 30 days");
+// } else if (month == 2){
+//     alert("This month has 28 days");
+// } else {
+//     alert("unkown month");
+// }
+
+// //solutions using switch statements 
+// switch (month) {
+//     case 1:
+//     case 3:
+//     case 5:
+//     case 7:
+//     case 8:
+//     case 10:
+//     case 12:
+//       alert("This month has 31 days");
+//       break;
+//     case 4:
+//     case 6:
+//     case 9:
+//     case 11:
+//       alert("This month has 30 days");
+//       break;
+//     case 2:
+//       alert("This month has 28 days");
+//       break;
+//     default:
+//       alert("Unknown month!");
+//   }
+  
+//   // Solution using if and switch
+// if (month >= 1 && month <= 12) {
+//     let nbdays = 31;
+//     switch (month) {
+//       case 4:
+//       case 6:
+//       case 9:
+//       case 11:
+//         nbdays = 30;
+//         break;
+//       case 2:
+//         nbdays = 28;
+//         break;
+//     }
+//     alert(`This month has ${nbdays} days`);
+//   } else {
+//     alert("Unknown month!");
+//   }
+
+//following second 
+//Write a program that asks for a time under the form of three information (hours, minutes, seconds). 
+//The program calculates and shows the time one second after.
+// Incorrect inputs must be taken into account.
+
+let hours = Number(prompt ("enter hours:"));
+let minutes = Number(prompt ("enter minutes:"));
+let seconds= Number(prompt ("enter seconds:"));
+
+if (
+    hours >= 0 &&
+    hours <= 23 &&
+    minutes >= 0 &&
+    minutes <= 59 &&
+    seconds >= 0 &&
+    seconds <= 59
+  ) {
+    seconds++; // Incrementing the seconds
+    if (seconds === 60) {
+      // Next minute: seconds are reset to 0
+      seconds = 0;
+      minutes++;
+      if (minutes === 60) {
+        // Next hour: minutes are reset to 0
+        minutes = 0;
+        hours++;
+        if (hours === 24) {
+          // Next second is midnight
+          hours = 0;
+        }
+      }
+    }
+    console.log(
+      `In a second, time will be ${hours} hours, ${minutes} minutes et ${seconds} seconds`
+    );
+  } else {
+    console.log("Incorrect hour!");
+  }
