@@ -251,36 +251,115 @@
 //The program calculates and shows the time one second after.
 // Incorrect inputs must be taken into account.
 
-let hours = Number(prompt ("enter hours:"));
-let minutes = Number(prompt ("enter minutes:"));
-let seconds= Number(prompt ("enter seconds:"));
+// let hours = Number(prompt ("enter hours:"));
+// let minutes = Number(prompt ("enter minutes:"));
+// let seconds= Number(prompt ("enter seconds:"));
 
-if (
-    hours >= 0 &&
-    hours <= 23 &&
-    minutes >= 0 &&
-    minutes <= 59 &&
-    seconds >= 0 &&
-    seconds <= 59
-  ) {
-    seconds++; // Incrementing the seconds
-    if (seconds === 60) {
-      // Next minute: seconds are reset to 0
-      seconds = 0;
-      minutes++;
-      if (minutes === 60) {
-        // Next hour: minutes are reset to 0
-        minutes = 0;
-        hours++;
-        if (hours === 24) {
-          // Next second is midnight
-          hours = 0;
-        }
-      }
-    }
-    console.log(
-      `In a second, time will be ${hours} hours, ${minutes} minutes et ${seconds} seconds`
-    );
-  } else {
-    console.log("Incorrect hour!");
-  }
+// if (
+//     hours >= 0 &&
+//     hours <= 23 &&
+//     minutes >= 0 &&
+//     minutes <= 59 &&
+//     seconds >= 0 &&
+//     seconds <= 59
+//   ) {
+//     seconds++; // Incrementing the seconds
+//     if (seconds === 60) {
+//       // Next minute: seconds are reset to 0
+//       seconds = 0;
+//       minutes++;
+//       if (minutes === 60) {
+//         // Next hour: minutes are reset to 0
+//         minutes = 0;
+//         hours++;
+//         if (hours === 24) {
+//           // Next second is midnight
+//           hours = 0;
+//         }
+//       }
+//     }
+//     console.log(
+//       `In a second, time will be ${hours} hours, ${minutes} minutes et ${seconds} seconds`
+//     );
+//   } else {
+//     console.log("Incorrect hour!");
+//   }
+
+//carousel
+
+// for (let i = 1; i <= 10; i++){
+//     console.log(i)
+// }
+
+// const turnCount = Number(prompt("How many turns"));
+// while ( i <= turnCount) {
+//     console.log(`This is turn number ${turn}`)
+
+// }
+
+//Parity 
+// for (let i = 1; i <= 10; i++) {
+//     if (i % 2 === 0) {
+//       console.log(`${i} is even`);
+      //improvement 1 
+//     } else if ( i % 3 === 0){
+//         console.log(`${i} is odd`)
+//     }
+//   }
+
+//   let userInput = Number(prompt("feed me numbers!!!"));
+  
+//   if( userInput % 2 === 0) {
+//       console.log(`${userInput} is even` );
+//   } else if ( userInput % 3 === 0){
+//     console.log(`${userInput} is odd` );
+
+//   }
+
+//Input Validation 
+//Write a program that continues to ask the user for a number 
+//until the entered number is less than or equal to 100.
+
+// let number = Number(prompt("Give me numbers!!!"));
+
+// for (number; number <= 100; number++) {
+// console.log(number);
+// }
+
+// let number = 0;
+// while (number < 50 || number > 100) {
+//   number = Number(prompt("Enter a number between 50 and 100:"));
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`${number} x ${i} = ${number * i}`);
+//   }
+
+//   for (let i = 1; i<= 10; i++ ) {
+//       console.log(`${number} x ${i} = ${number * i}` );
+//   }
+
+//   let number = 0; // Initial value set to enter the loop
+//   while (number < 2 || number > 9) {
+//     number = Number(prompt("Enter a number between 2 and 9:"));
+//   }
+  
+//neither yes nor no 
+//write a program that plays "neither yes nor no"
+//the programs asks the user to enter text until either "yes" or "no" is typed
+
+// let text = "";
+// while( text !== yes && input ==! no) {
+//    text = prompt("Let\'s play a game!")
+// }
+
+// for (let i = 1; i <= 100; i++){
+//     if (i % 3  === 0) {
+//         console.log("fizz");
+//     } else if ( i % 5 === 0){
+//         console.log("Buzz");
+//     } else( i % 15 === 0) 
+//     {
+//         console.log("fizzbuzz");
+//     }
+// }
