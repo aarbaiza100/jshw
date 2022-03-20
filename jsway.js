@@ -147,3 +147,219 @@
 // } else {
 //   console.log(`${number1} and ${number2} are equal`);
 // }
+
+
+//final values problems 
+// nb1=nb2=nb3=4
+//nb1 = 4, nb2=3, nb3= 2
+//nb1= 2, nb2=4,nb3=0
+
+// let nb1 = Number(prompt("Enter nb1:"));
+// let nb2 = Number(prompt("Enter nb2:"));
+// let nb3 = Number(prompt("Enter nb3:"));
+
+// if (nb1 > nb2) {
+//   nb1 = nb3 * 2;
+// } else {
+//   nb1++;
+//   if (nb2 > nb3) {
+//     nb1 += nb3 * 3;
+//   } else {
+//     nb1 = 0;
+//     nb3 = nb3 * 2 + nb2;
+//   }
+// }
+// console.log(nb1, nb2, nb3);
+
+
+ //number of days in a month 
+//  Write a program that accepts a month number (between 1 and 12), 
+//  then shows the number of days of that month. 
+//  Leap years are excluded. 
+//  Incorrect inputs must be taken into account.
+
+// const month = Number(prompt("Enter a month number:"));
+
+// if (
+//     month == 1 ||
+//     month == 2 ||
+//     month == 3 ||
+//     month == 4 ||
+//     month == 5 ||
+//     month == 6 ||
+//     month == 7 ||
+//     month == 8 ||
+//     month == 9 ||
+//     month == 10 ||
+//     month == 11 ||
+//     month == 12 
+// ) {
+//     alert("This month has 31 days");
+// } else if (month == 4 || month == 6|| month == 9 || month == 11) {
+//     alert("This month has 30 days");
+// } else if (month == 2){
+//     alert("This month has 28 days");
+// } else {
+//     alert("unkown month");
+// }
+
+// //solutions using switch statements 
+// switch (month) {
+//     case 1:
+//     case 3:
+//     case 5:
+//     case 7:
+//     case 8:
+//     case 10:
+//     case 12:
+//       alert("This month has 31 days");
+//       break;
+//     case 4:
+//     case 6:
+//     case 9:
+//     case 11:
+//       alert("This month has 30 days");
+//       break;
+//     case 2:
+//       alert("This month has 28 days");
+//       break;
+//     default:
+//       alert("Unknown month!");
+//   }
+  
+//   // Solution using if and switch
+// if (month >= 1 && month <= 12) {
+//     let nbdays = 31;
+//     switch (month) {
+//       case 4:
+//       case 6:
+//       case 9:
+//       case 11:
+//         nbdays = 30;
+//         break;
+//       case 2:
+//         nbdays = 28;
+//         break;
+//     }
+//     alert(`This month has ${nbdays} days`);
+//   } else {
+//     alert("Unknown month!");
+//   }
+
+//following second 
+//Write a program that asks for a time under the form of three information (hours, minutes, seconds). 
+//The program calculates and shows the time one second after.
+// Incorrect inputs must be taken into account.
+
+// let hours = Number(prompt ("enter hours:"));
+// let minutes = Number(prompt ("enter minutes:"));
+// let seconds= Number(prompt ("enter seconds:"));
+
+// if (
+//     hours >= 0 &&
+//     hours <= 23 &&
+//     minutes >= 0 &&
+//     minutes <= 59 &&
+//     seconds >= 0 &&
+//     seconds <= 59
+//   ) {
+//     seconds++; // Incrementing the seconds
+//     if (seconds === 60) {
+//       // Next minute: seconds are reset to 0
+//       seconds = 0;
+//       minutes++;
+//       if (minutes === 60) {
+//         // Next hour: minutes are reset to 0
+//         minutes = 0;
+//         hours++;
+//         if (hours === 24) {
+//           // Next second is midnight
+//           hours = 0;
+//         }
+//       }
+//     }
+//     console.log(
+//       `In a second, time will be ${hours} hours, ${minutes} minutes et ${seconds} seconds`
+//     );
+//   } else {
+//     console.log("Incorrect hour!");
+//   }
+
+//carousel
+
+// for (let i = 1; i <= 10; i++){
+//     console.log(i)
+// }
+
+// const turnCount = Number(prompt("How many turns"));
+// while ( i <= turnCount) {
+//     console.log(`This is turn number ${turn}`)
+
+// }
+
+//Parity 
+// for (let i = 1; i <= 10; i++) {
+//     if (i % 2 === 0) {
+//       console.log(`${i} is even`);
+      //improvement 1 
+//     } else if ( i % 3 === 0){
+//         console.log(`${i} is odd`)
+//     }
+//   }
+
+//   let userInput = Number(prompt("feed me numbers!!!"));
+  
+//   if( userInput % 2 === 0) {
+//       console.log(`${userInput} is even` );
+//   } else if ( userInput % 3 === 0){
+//     console.log(`${userInput} is odd` );
+
+//   }
+
+//Input Validation 
+//Write a program that continues to ask the user for a number 
+//until the entered number is less than or equal to 100.
+
+// let number = Number(prompt("Give me numbers!!!"));
+
+// for (number; number <= 100; number++) {
+// console.log(number);
+// }
+
+// let number = 0;
+// while (number < 50 || number > 100) {
+//   number = Number(prompt("Enter a number between 50 and 100:"));
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`${number} x ${i} = ${number * i}`);
+//   }
+
+//   for (let i = 1; i<= 10; i++ ) {
+//       console.log(`${number} x ${i} = ${number * i}` );
+//   }
+
+//   let number = 0; // Initial value set to enter the loop
+//   while (number < 2 || number > 9) {
+//     number = Number(prompt("Enter a number between 2 and 9:"));
+//   }
+  
+//neither yes nor no 
+//write a program that plays "neither yes nor no"
+//the programs asks the user to enter text until either "yes" or "no" is typed
+
+// let text = "";
+// while( text !== yes && input ==! no) {
+//    text = prompt("Let\'s play a game!")
+// }
+
+// for (let i = 1; i <= 100; i++){
+//     if (i % 3  === 0) {
+//         console.log("fizz");
+//     } else if ( i % 5 === 0){
+//         console.log("Buzz");
+//     } else( i % 15 === 0) 
+//     {
+//         console.log("fizzbuzz");
+//     }
+// }
